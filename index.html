@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Time Character Counter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Real Time Character Counter</h2>
+        <textarea id="textarea" class="textarea" placeholder="Write you text here"></textarea>
+        <!-- <textarea id="textarea" class="textarea" placeholder="Write you text here" maxlength="50"></textarea> -->
+        <!--
+             notes: maxlength allows only that 
+             particular number of characters to be 
+             typed. -->
+
+        <div class="counter-container">
+            <p>Characters: <span class="total-counter" id="total-counter"></span></p>
+
+            <p>Words: <span class="word-counter" id="word-counter"></span></p>
+
+
+
+            <!-- <p>Remaining: <span class="remaining-counter" id="remaining-counter"></span></p> -->
+        </div>
+
+        <div class="functions">
+            <button type="reset" class="btn" id="clear">Clear</button>
+            <button class="btn" id="copy" type="button">Copy</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
