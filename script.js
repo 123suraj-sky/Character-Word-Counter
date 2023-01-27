@@ -1,6 +1,3 @@
-//todo: complete the word counter
-//todo: update a class to show alert messages
-
 const textareaElement = document.getElementById('textarea');
 const totalCounterElement = document.getElementById('total-counter');
 const totalWordCounterElement = document.getElementById('word-counter');
@@ -33,21 +30,21 @@ function updateCounter() {
     //* word counter
     // console.log(textareaElement.value.length);
     // console.log(textareaElement.value[0]);
-    let count = 0;
+    let temp, len = 0;
     for (let index = 0; index < textareaElement.value.length; index++) {
-        if (count === 0) {
-            count++;
-        }
+        // remove extra spaces
+        temp = textareaElement.value.split(/[ ]+/);
+        temp.join(" ");
+        len = temp.length;
+        // console.log(temp, temp.length);
 
-        if (textareaElement.value[index] == ' ') {
-            count++;
+        // if last element is space then reduce the length by 1
+        if (textareaElement.value[textareaElement.value.length - 1] === ' ') {
+            len--;
         }
-        // if (textareaElement.value[textareaElement.value.length - 1] == ' ') {
-        //     console.log(count);
-        //     count--;
-        // }
+        console.log(textareaElement.value[textareaElement.value.length - 1])
     }
-    totalWordCounterElement.innerText = count;
+    totalWordCounterElement.innerText = len;
 }
 
 //* clear text
